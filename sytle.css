@@ -175,6 +175,14 @@
     font-style: italic;
 }
 
+.disapear{
+    display: none;
+}
+
+.alert{
+    display:none;
+}
+
 .tombol {
     border-radius: 40px;
     text-transform: uppercase;
