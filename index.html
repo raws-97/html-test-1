@@ -14,7 +14,7 @@
 
     <title>Infobank Institute</title>
   </head>
-  <body onload="getYear()">
+  <body>
     <!-- Just an image -->
     <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container">
@@ -36,7 +36,7 @@
   <!-- Jumbotron -->
   <div class="jumbotron jumbotron-fluid">
     <div class="container">
-      <h1 class="display-4">CARA <span>AMAN</span> & <span>MENGUNTUNGKAN</span><br> DENGAN <span>QRIS</span></h1>
+      <h1 class="display-4" id="judul">CARA <span>AMAN</span> & <span>MENGUNTUNGKAN</span><br> DENGAN <span>QRIS</span></h1>
       <p class="lead">(QRIS : Quick Response Indonesia Standard Sesuai PDAG 21/18/PDAG/2019)</p>
     </div>
   </div>
@@ -114,18 +114,61 @@
         <div class="col-lg-6">
             <center>
             <img class="img-fluid" src="https://media-exp1.licdn.com/dms/image/C4D1BAQHPyujhgzJeuQ/company-background_10000/0?e=2159024400&v=beta&t=FU7aXTtSIPRPDkLzjLMC5FzkKJFsICHYyJC4ArWOGtg" alt="Infobank">
-            </center>
-        </div>
-        <div class="col-lg-4">
-            <h3><span>Contact Us</span></h3>
             <p><img src="https://cdn2.iconfinder.com/data/icons/font-awesome/1792/phone-square-512.png" alt="Contact"> Ary : 0858 4144 5166 <br> ary.infobank@gmail.com</p>
             <p><img src="https://cdn2.iconfinder.com/data/icons/font-awesome/1792/phone-square-512.png" alt="Contact"> Yenny : 0878 8000 4465 <br> yeny.infobank@gmail.com</p>
+            </center>
+        </div>
+        <div class="col-lg-5">
+            <h3><span>Contact Us</span></h3>
+            <form id="test-form">
+              <div class="form-group">
+                <label for="emailInput">Alamat Email</label>
+                <input type="email" class="form-control" id="emailInput" name="emailInput" aria-describedby="emailHelp">
+              </div>
+              <div class="form-group">
+                <label for="companyName">Nama Perusahaan</label>
+                <input type="text" class="form-control" name="companyName" id="companyName">
+              </div>
+              <div class="form-group">
+                <label for="userName">Nama</label>
+                <input type="text" class="form-control" name="userName" id="userName">
+              </div>
+              <div class="form-group">
+                <label for="phoneNum">Nomor Telepon</label>
+                <input type="number" class="form-control" name="phoneNum" id="phoneNum">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control disapear" name="dateTime" id="dateTime">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control disapear" name="judulPel" id="judulPel">
+              </div>
+              <button type="submit" class="btn btn-primary" id="submit-form">Submit</button>
+            </form>
+            <br>
+            <div class="alert alert-success alert-dismissible fade show" role="alert" id="alertBlock">
+              <strong>Sukses!</strong> Terimakasih sudah mendaftar, kami akan menghubungi anda segera.
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close" id="close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
           </div>
           </div>
       </div>
+
+      
       </div>
     </section>
     <!-- End of Contact Us -->
+
+    <!-- Form -->
+    <div class="container">
+      
+      
+    </div>
+    
+    
+    <!-- End of Form -->
 
     <!-- Footer -->
     <div class="footer">
@@ -142,20 +185,16 @@
         </div>
     </div>
     <!-- End of Footer -->
+
+    
     
 </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <script>
-        function getYear(){
-            const year = new Date().getFullYear;
-            $('thn').html(year);
-
-        }
-    </script>
+    <script src="index.js"></script>
   </body>
 </html>
